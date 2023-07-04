@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(20, 215, 20);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.2s infinite linear;
+}
+
+.mario {
+    width:130px;
+    position: absolute;
+    bottom:  0;
+    
+}
+.restart{
+    position: relative;
+    display: block;
+    bottom: -30%;
+    margin: auto;
+    
+}
+.jump{
+    animation: jump 500ms ease-out;
+}
+.h1 {
+    position: absolute;
+    bottom: 65%;
+    left: 50%;
+    color: purple;
+    
+}
+.nuven {
+    position: absolute;
+    width: 400px;
+    animation: nuven_animation 10s infinite linear;
+}
+
+@keyframes nuven_animation {
+
+    from {
+        right: -400px;
+    }
+
+    to {
+        right:  100%;
+    }
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 130px;
+    }
+
+    50% {
+        bottom: 130px;
+    }
+
+    60% {
+        bottom: 130px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes pipe-animation {
+    from {
+        right: -80px;
+    }
+
+    to {
+        right:  100%;
+    }
+}
